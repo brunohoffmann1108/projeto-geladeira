@@ -11,7 +11,6 @@ void setup() {
   pinMode(34, INPUT);
   pinMode(35, OUTPUT);
   servo.attach(pino_servo);
-  
 
 }
 
@@ -23,9 +22,9 @@ void loop() {
 
   analogWrite(pin_led, brilho_led);
 
-  int sla_servo = map(valor_amplificado, 0, 4095, 0, 180);
-  servo.write(sla_servo);
+  int valor_servo = map(valor_amplificado, 0, 4095, 0, 180);
+  servo.write(valor_servo);
   Serial.print("Valor do servo: ");
-  Serial.println(sla_servo);
+  Serial.println(valor_servo);
   delay(20);
 }
